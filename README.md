@@ -8,5 +8,6 @@ This repository contains assignments and projects developed during my undergradu
   - Algorithms and Programming Logic
 - **2024 - Semester 2 (currently)**
   - Basic Web Development
+  - ...
 
 Thanks!
