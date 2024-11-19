@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praias</title>
+    <link rel="stylesheet" href="assets/css/praias.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#campsbay">Camps Bay</a>
+            <a href="#yuan">Koh Nang Yuan</a>
+            <a href="#maldivas">Maldivas</a>
+            <a href="#formulario">Formulário</a>
+            <a href="#login" id="logarAdmin">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="campsbay"> 
+            <h1>Camps Bay, África do Sul</h1>
+        </section>
+
+        <section id="yuan"> 
+            <h1>Koh Nang Yuan, Tailândia</h1>
+        </section>
+
+        <section id="maldivas"> 
+            <h1>Maldivas</h1>
+        </section>
+
+        <section id="formulario">
+            <form id="formPraias">
+                <h2>Formulário</h2>
+                <input type="text" name="name" id="namePraias" placeholder="Nome"> <br>
+                <input type="email" name="mail" id="mailPraias" placeholder="Email"> <br>
+                <input type="date" name="date" id="datePraias"> <br>
+                <select name="destination" id="destinationPraias">
+                    <option>Escolher destino</option>
+                    <option value="Camps Bay">Camps Bay</option>
+                    <option value="Koh Nang Yuan">Koh Nang Yuan</option>
+                    <option value="Maldivas">Maldivas</option>
+                </select>
+                <br>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="secTabela">
+            <table id="tabelaPraias">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Data</th>
+                        <th>Destino</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Marcio Henrique de Oliveira Franco &copy; 38857570</p>
+
+        <dialog id="login">
+            <form>
+                <h2>Login</h2>
+                    <label for="email"> E-mail:</label>
+                    <input type="text" name="email" id="email"><br>
+                    <label for="senha"> Senha: </label>
+                    <input type="password" name="senha" id="senha"><br>
+                    <button type="button" id="btnFechar">Sair</button>
+                    <button type="submit">Entrar</button>
+            </form>
+        </dialog>
+    </footer>
+
+    <script src="assets/js/praias.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+</html>

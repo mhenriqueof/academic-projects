@@ -1,0 +1,53 @@
+a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: large;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+a:hover {
+    background-color: gray;
+    transform: scale(1.1);
+}
+
+nav {
+    background-color: black;
+    display: flex;
+}
+
+#admin {
+    margin-left: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.conteudo {
+    padding-top: 30vh;
+    height: 60vh;
+}
+
+#portfolio {
+    background-color: rgb(201, 201, 201);
+}
+
+#orcamento {
+    background-color: rgb(238, 238, 238);
+}
+
+#comentarios {
+    background-color: rgb(201, 201, 201);
+}
+
+footer{
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: large;
+}

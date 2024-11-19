@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 2</title>
+        <style>
+            #menu a{
+                color: black;
+                text-decoration: solid;
+                font-size: 20px;
+            }
+
+            #menu a:hover{
+                color:grey;
+                font-weight: bolder;
+                /* font-size: 20px; */
+            }
+
+            ul li{list-style-type: circle;}
+            .li-disc{list-style-type: disc;}
+            .li-square{list-style-type: square;}
+            .blue{color: blue;}
+            .red{color: red;}
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Página inicial</h1>
+            <!--PÃO-->
+            <nav id="menu">
+                <a href="./index.html">Home</a> &nbsp; | &nbsp;
+                <a href="./sobre.html">Sobre</a> &nbsp; | &nbsp;
+                <a href="#">Contato</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Formatação de texto</h2>
+                <li><i>Texto itálico</i></li>
+                <li><em style="color: red;">Texto enfase</em></li>
+                <li style="color: blue;"><b>Texto negrito</b></li>
+                <li><strong>Texto importante</strong></li>
+                <li><u>Texto underline</u></li>
+                <li class="li-disc red"><ins>Texto inserido</ins></li>
+                <li class="blue"><del>Texto deletado</del></li>
+                <li class="li-square"><q>Texto entre aspas</q></li>
+            </section>
+            <aside>
+                <h3>Anúncio</h3>
+                <p>Compre</p>
+            </aside>
+        </main>
+
+        <footer>
+            <a href="#">Teste</a>
+            <p>Todos os direitos reservados &copy;2024</p>
+        </footer>
+    </body>
+</html>

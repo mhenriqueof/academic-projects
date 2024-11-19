@@ -1,0 +1,13 @@
+header {
+    background-color: rgb(240, 240, 240);
+    padding: 20px;
+}
+
+label, input, fieldset, button, textarea {
+    margin: 5px;
+}
+
+legend {
+    color: blue;
+    font-weight: bold;
+}

@@ -1,0 +1,92 @@
+@import url('style.css');
+
+
+
+nav {
+    background-image: linear-gradient(to right, #178142, #0d552a);
+}
+
+
+
+#alpes {
+    background-image: url('../img/alpes.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 700px;
+}
+
+#cataratas {
+    background-image: url('../img/cataratas.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 700px;
+}
+
+#son {
+    background-image: url('../img/son.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 700px;
+}
+
+#formulario {
+    background-image: url('../img/formulario.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 615px;
+}
+
+
+
+form {
+    padding: 25px 25px;
+}
+
+input, select {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+button {
+    color: white;
+    background-color: #178142;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+#secTabela {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 99%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid rgb(88, 88, 88);
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+footer {
+    color: #ccc;
+    text-align: center;
+}

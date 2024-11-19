@@ -1,0 +1,114 @@
+@import url('style.css');
+
+
+
+main {
+    background-image: url('../img/index/viagem.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background-image: linear-gradient(to right, #5b7685, #394952);
+}
+
+
+
+section {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 10px;
+    padding: 75px 10px 10px 10px;
+}
+
+.fotoDestino {
+    opacity: 0.3;
+}
+.fotoDestino:hover {
+    opacity: 1;
+}
+
+#praias {
+    background-image: url('../img/index/praias.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+    padding-top: 500px;
+}
+#btnPraias {
+    border: none;
+    padding: 15px 0px;
+    margin: 100px;
+    background-color: #47a1bd;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#cidades {
+    background-image: url('../img/index/cidades.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+    padding-top: 500px;
+}
+#btnCidades {
+    border: none;
+    padding: 15px 0px;
+    margin: 100px;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#ecoturismo {
+    background-image: url('../img/index/ecoturismo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 500px;
+}
+#btnEcoturismo {
+    border: none;
+    padding: 15px 0px;
+    margin: 100px;
+    background-color: #178142;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+
+form {
+    padding: 25px 25px;
+}
+
+input, select {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+button {
+    color: white;
+    background-color: #5b7685;
+    border: none;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+footer {
+    color: #ccc;
+    text-align: center;
+}

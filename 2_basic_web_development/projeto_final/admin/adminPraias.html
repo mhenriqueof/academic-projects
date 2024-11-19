@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Praias</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/js/checkLogado.js" defer></script>
+</head>
+
+<body class="esconder">
+    
+    <h1>Página de Administrador</h1> <br>
+    <header>
+        <div class="item flex-2" id="menuPraias"><a href="adminPraias.html">Praias</a></div>
+        <div class="item" id="menuCidades"><a href="adminCidades.html">Cidades</a></div>
+        <div class="item" id="menuEcoturismo"><a href="adminEcoturismo.html">Ecoturismo</a></div>
+    </header>
+    
+    <main>
+        <h1 style="color: #47a1bd;">Gerenciar Praias</h1> 
+        
+        <form id="formPraias">
+            <input type="text" name="name" id="namePraias" placeholder="Nome"> <br>
+            <input type="email" name="mail" id="mailPraias" placeholder="Email"> <br>
+            <input type="date" name="date" id="datePraias"> <br>
+            <select name="destination" id="destinationPraias">
+                <option>Escolher destino</option>
+                <option value="Camps Bay">Camps Bay</option>
+                <option value="Koh Nang Yuan">Koh Nang Yuan</option>
+                <option value="Maldivas">Maldivas</option>
+            </select>
+            <br>
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <table id="adminPraias">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data</th>
+                    <th>Destino</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <button id="logoutAdmin">Sair</button>
+    </footer>
+
+    <script src="assets/js/adminPraias.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    
+    int tipo, escolha, acertos;
+    
+    while (1) {
+        printf("[1] Chá branco\n[2] Chá verde\n[3] Chá preto\n[4] Chá de ervas\nChá correto: ");
+        scanf("%d", &tipo);
+        
+        if (tipo >= 1 && tipo <= 4) {
+            printf("---\n");
+            break;
+        }
+        printf("Valor invalido.\n");
+    }
+    
+    for (int i = 1; i <= 4; i++) {
+        
+        while (1) {
+            printf("Escolha do %d participante: ", i);
+            scanf("%d", &escolha);
+            
+            if (escolha >= 1 && escolha <= 4) {
+                printf("---\n");
+                break;
+            }
+            printf("Valor invalido.\n");
+        }
+        if (escolha == tipo) {
+            acertos += 1;
+        }
+    }
+    printf("%d participantes acertaram.", acertos);
+    
+    return 0;
+}

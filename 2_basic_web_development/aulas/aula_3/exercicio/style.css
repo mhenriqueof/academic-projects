@@ -1,0 +1,19 @@
+#menu {
+    background-color: rgb(50, 50, 50);
+}
+
+#menu a{
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}

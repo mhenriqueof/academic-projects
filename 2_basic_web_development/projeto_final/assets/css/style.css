@@ -1,0 +1,54 @@
+/* Marcio Henrique de Oliveira Franco - 38857570 */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #1f1f1f;
+}
+
+h1 {
+    color: white;
+    margin: 0px 50px;
+    font-size: 50px;
+    padding: 100px 50px;
+}
+
+h2 {
+    color: white;
+    margin: 0px 20px;
+}
+
+
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 50px;
+    transition: padding 0.5s ease-in-out, transform 0.5s ease;
+    cursor: pointer;
+    align-items: left;
+}
+
+a:hover {
+    transform: scale(1.2);
+}
+
+nav a:last-child {
+    margin-left: auto;
+}
+
+nav.shrink, a.shrink{
+    padding: 1px 50px;
+}

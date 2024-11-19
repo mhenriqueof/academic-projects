@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+	
+	char produto;
+	int a, b, c, qtd;
+	
+	printf("Quantidade produto A em estoque: ");
+	scanf("%d", &a);
+	
+	printf("Quantidade produto B em estoque: ");
+	scanf("%d", &b);
+	
+	printf("Quantidade produto C em estoque: ");
+	scanf("%d", &c);
+	
+	printf("Produto desejado [Digite A, B ou C]: ");
+	scanf(" %c", &produto);
+	
+	printf("Quantidade do produto %c: ", produto);
+	scanf("%d", &qtd);
+	
+	switch (produto) {
+		
+		case 'a':
+			if (qtd > a) {
+				printf("Fora de estoque\n");
+			} else {
+				printf("Quantidade em estoque\n");
+			}
+			a -= qtd;
+			if (a < 5) {
+				printf("Reabastecer A\n");	
+			}
+			break;
+		
+		case 'b':
+			if (qtd > b) {
+				printf("Fora de estoque\n");
+			} else {
+				printf("Quantidade em estoque\n");
+			}
+			b -= qtd;
+			if (b < 5) {
+				printf("Reabastecer B\n");
+			}
+			break;
+			
+		case 'c':
+			if (qtd > c) {
+				printf("Fora de estoque\n");
+			} else {
+				printf("Quantidade em estoque\n");
+			}
+			c -= qtd;
+			if (c < 5) {
+				printf("Reabastecer C\n");
+			}
+	}
+	
+	return 0;
+}

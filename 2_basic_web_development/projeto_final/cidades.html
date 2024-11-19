@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidades</title>
+    <link rel="stylesheet" href="assets/css/cidades.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body id="cidades">
+
+    <header>
+        <nav>
+            <a href="#york">Nova York</a>
+            <a href="#roma">Roma</a>
+            <a href="#xangai">Xangai</a>
+            <a href="#formulario">Formulário</a>
+            <a href="#login" id="logarAdmin">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="york"> 
+            <h1>Nova York, Estados Unidos</h1>
+        </section>
+
+        <section id="roma"> 
+            <h1>Roma, Itália</h1>
+        </section>
+
+        <section id="xangai"> 
+            <h1>Xangai, China</h1>
+        </section>
+
+        <section id="formulario">
+            <form id="formCidades">
+                <h2>Formulário</h2>
+                <input type="text" name="name" id="nameCidades" placeholder="Nome"> <br>
+                <input type="email" name="mail" id="mailCidades" placeholder="Email"> <br>
+                <input type="date" name="date" id="dateCidades"> <br>
+                <select name="destination" id="destinationCidades">
+                    <option>Escolher destino</option>
+                    <option value="Nova York">Nova York</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Xangai">Xangai</option>
+                </select>
+                <br>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="secTabela">
+            <table id="tabelaCidades">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Data</th>
+                        <th>Destino</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Marcio Henrique de Oliveira Franco &copy; 38857570</p>
+
+        <dialog id="login">
+            <form>
+                <h2>Login</h2>
+                    <label for="email"> E-mail:</label>
+                    <input type="text" name="email" id="email"><br>
+                    <label for="senha"> Senha: </label>
+                    <input type="password" name="senha" id="senha"><br>
+                    <button type="button" id="btnFechar">Sair</button>
+                    <button type="submit">Entrar</button>
+            </form>
+        </dialog>
+    </footer>
+
+    <script src="assets/js/cidades.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+</html>

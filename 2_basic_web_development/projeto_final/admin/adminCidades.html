@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Cidades</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/js/checkLogado.js" defer></script>
+</head>
+
+<body id="bodyCidades" class="esconder">
+
+    <h1>Página de Administrador</h1> <br>
+    <header>
+        <div class="item" id="menuPraias"><a href="adminPraias.html">Praias</a></div>
+        <div class="item flex-2" id="menuCidades"><a href="adminCidades.html">Cidades</a></div>
+        <div class="item" id="menuEcoturismo"><a href="adminEcoturismo.html">Ecoturismo</a></div>
+    </header>
+
+    <main>
+        <h1 style="color: #2b2b2b;">Gerenciar Cidades</h1> 
+
+        <section id="formulario">
+            <form id="formCidades">
+                <input type="text" name="name" id="nameCidades" placeholder="Nome"> <br>
+                <input type="email" name="mail" id="mailCidades" placeholder="Email"> <br>
+                <input type="date" name="date" id="dateCidades"> <br>
+                <select name="destination" id="destinationCidades">
+                    <option>Escolher destino</option>
+                    <option value="Nova York">Nova York</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Xangai">Xangai</option>
+                </select>
+                <br>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <table id="adminCidades">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data</th>
+                    <th>Destino</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <button id="logoutAdmin">Sair</button>
+    </footer>
+
+    <script src="assets/js/adminCidades.js"></script>
+
+</body>
+</html>

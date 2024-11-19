@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Display em CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Aula Display em CSS</h1>
+        <p>O atributo <code>display</code> em CSS define como um elemento HTML deve ser exibido no layout da página.</p>
+
+        <section class="block">
+            <h2>display: block;</h2>
+
+            <p>Elementos com <code>display: block;</code> são renderizados como blocos que ocupam toda a largura disponível e começam em uma nova linha. Eles geralmente são usados para criar divisões entre conteúdo.
+                <ul>
+                    <h3>Exemplos:</h3>
+                    <li>Parágrafos: <code>&lt;p&gt; Este é um exemplo de parágrafo.&lt;/p&gt;</code></li>
+                    <li>Títulos: <code>&lt;h1&gt;Este é um exemplo de título.&lt;/h1&gt;</code></li>
+                    <li>Divisões:<code> &lt;div&gt;Este é um exemplo de divisão.&lt;/div&gt;</code></li>
+                    <li>Listas:<code> &lt;ul&gt;&lt;li&gt; Este é um exemplo de lista.&lt;/li&gt;&lt;ul&gt;</code></li>                
+                </ul>
+            </p>
+        </section>
+        <section>
+            <div class="inline">display: inline;</div>
+            <div class="inline">display: inline;</div>
+            <div class="inline">display: inline;</div>
+            <div class="inline">display: inline;</div>
+
+            <p>Elementos com <code>display: inline;</code> são renderizados em linha e ocupam apenas o espaço necessário.
+                <ul>
+                    <h3>Exemplos:</h3>
+                    <li>Links: <code>&lt;a href="#"&gt;Este é um exemplo de link&lt;/a&gt;</code></li>
+                    <li>Texto: <code>&lt;span&gt;Este é um exemplo de texto em linha&lt;/span&gt;.</code></li>
+                    <li>Ícones: <code>&lt;i class="fas fa-star"&gt;&lt;/i&gt; Este é um exemplo de ícone em linha.</code></li>
+                    <li>Botões: <code>&lt;button&gt;Este é um exemplo de botão&lt;/button&gt;</code></li>
+                </ul>
+            </p>
+        </section>
+        <section class="inline-block">
+            <span>display: inline-block;</span>
+            <span>display: inline-block;</span>
+            <span>display: inline-block;</span>
+            <span>display: inline-block;</span>
+            <p>Elementos com <code>display: inline-block;</code> também são renderizados em linha, mas permitem definir largura e altura, comportando-se como blocos em linha.
+                <ul>
+                    <h3>Exemplo:</h3>
+                    <li>img: <code>&lt;img scr=""&gt;Este é um exemplo de imagem&lt;/img&gt;</code></li>
+                </ul>
+            </p>
+        </section>    
+        <section id="mostrar" class="none">
+            <h2>display: none;</h2>
+            <p>Elementos com <code>display: none;</code> não são renderizados na página e ficam invisíveis.Eles são usados para ocultar temporariamente elementos via CSS.</p>
+        </section>
+        <form>
+            <label for="mostrar">Mostrar div</label>
+            <input type="radio" name="mostrar" id="exibir"> 
+            <label for="naoMostrar">Não Mostrar div</label>
+            <input type="radio" name="mostrar" id="naoExibir">
+        </form>
+    </main>
+    <script>
+        document.getElementById('exibir').addEventListener('click', () =>{
+            document.getElementById('mostrar').classList.toggle('none');
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth"
+            })
+        })
+        document.getElementById('naoExibir').addEventListener('click', () =>{
+            document.getElementById('mostrar').classList.add('none');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- Marcio Henrique de Oliveira Franco - 38857570 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brisa Turismo</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="assets/js/login.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#viagens">Início</a>
+            <a href="praias.html" target="_blank">Praias</a>
+            <a href="cidades.html" target="_blank">Cidades</a>
+            <a href="ecoturismo.html" target="_blank">Ecoturismo</a>
+            <a href="#login" id="logarAdmin">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class='fotoDestino' id="praias"> 
+                <button id="btnPraias"><a href="praias.html" target="_blank">Viagens - Praias →</a></button>
+            </div>
+    
+            <div class='fotoDestino' id="cidades"> 
+                <button id="btnCidades"><a href="cidades.html" target="_blank">Viagens - Cidades →</a></button>
+            </div>
+    
+            <div class='fotoDestino' id="ecoturismo"> 
+                <button id="btnEcoturismo"><a href="ecoturismo.html" target="_blank">Viagens - Ecoturismo →</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Marcio Henrique de Oliveira Franco &copy; 38857570</p>
+    </footer>
+
+    <dialog id="login">
+        <form>
+                <label for="email"> E-mail:</label>
+                <input type="text" name="email" id="email"><br>
+                <label for="senha"> Senha: </label>
+                <input type="password" name="senha" id="senha"><br>
+                <button type="submit">Entrar</button>
+                <button type="button" id="btnFechar">Sair</button>
+        </form>
+    </dialog>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+header{
+    background-color: #eee;
+    padding: 8px;
+}
+
+label, input, select, textarea, button{
+    margin: 5px;
+}
+
+legend{
+    padding: 8px;
+    font-weight: bold;
+    color: blue;
+}
