@@ -1,48 +1,81 @@
-const menu = document.getElementsByClassName('menu');
-for (let i = 0; i < 3; i++) {
-    menu[i].style.textDecoration = 'none';
-    menu[i].style.padding = '10px';
+// Header
+const header = document.createElement('header');
+document.body.appendChild(header);
+
+const homeLink = document.createElement('a');
+homeLink.href = '#';
+homeLink.textContent = 'Home';
+header.appendChild(homeLink);
+
+const sobreLink = document.createElement('a');
+sobreLink.href = '#';
+sobreLink.textContent = 'Sobre';
+header.appendChild(sobreLink);
+
+const contatoLink = document.createElement('a');
+contatoLink.href = '#';
+contatoLink.textContent = 'Contato';
+header.appendChild(contatoLink);
+
+
+// Main
+const main = document.createElement('main');
+document.body.appendChild(main);
+
+// Formulário
+const section1 = document.createElement('section');
+main.appendChild(section1);
+
+const h2 = document.createElement('h2');
+section1.appendChild(h2);
+h2.textContent = 'Exercício';
+
+section1.appendChild(document.createElement('hr'));
+
+
+const form = document.createElement('form');
+section1.appendChild(form);
+
+const campo = (id, campo, placeholder) => {
+    const label = document.createElement('label');
+    form.appendChild(label);
+    label.setAttribute('for', id);
+    label.textContent = campo;
+
+    const input = document.createElement('input');
+    form.appendChild(input);
+    input.type = 'text';
+    input.name = id;
+    input.id = id;
+    input.placeholder = placeholder;
+    form.appendChild(document.createElement('br'));
 }
 
+campo('nome', 'Nome:', 'Insira Nome aqui');
+campo('cpf', 'CPF:', 'Insira CPF aqui');
+campo('endereco', 'Endereço:', 'Insira Endereço aqui');
+campo('telefone', 'Telefone:', 'Insira Telefone aqui');
+campo('email', 'Email:', 'Insira Email aqui');
 
-const cabecalho = document.getElementById('cabecalho');
-cabecalho.style.textAlign = 'center';
+const btnEnviar = document.createElement('input');
+form.appendChild(btnEnviar);
+btnEnviar.type = 'submit';
+btnEnviar.value = 'Enviar';
 
+const separador = document.createElement('span');
+form.appendChild(separador);
+separador.textContent = ' | '
 
-const input = document.getElementsByClassName('input');
-for (let i = 0; i < input.length; i++) {
-    input[i].style.margin = '8px';
-}
+const btnLimpar = document.createElement('input');
+form.appendChild(btnLimpar);
+btnLimpar.type = 'reset';
+btnLimpar.value = 'Limpar';
 
-const but = document.getElementsByClassName('but');
-for (let i = 0; i < but.length; i++) {
-    but[i].style.margin = '10px';
-}
+section1.appendChild(document.createElement('hr'));
 
-const table = document.getElementById('table');
-table.style.width = '100%';
-table.style.borderCollapse = 'collapse';
+// Tabela
+const section2 = document.createElement('section');
+main.appendChild(section2);
 
-const thead = document.getElementById('thead');
-thead.style.backgroundColor = '#0085a6';
-thead.style.color = 'white';
-
-const ts = document.getElementsByClassName('ts');
-for (let i = 0; i < ts.length; i++) {
-    ts[i].style.border = '1px solid black';
-    ts[i].style.padding = '8px';
-    ts[i].style.textAlign = 'center';
-}
-
-let cont = 6;
-while (cont < ts.length) {
-    ts[cont].style.backgroundColor = '#7cd1f2';
-    cont += 2;
-    ts[cont].style.backgroundColor = '#7cd1f2';
-    cont += 3;
-}
-
-const buttons = document.getElementById('buttons');
-buttons.style.display = 'flex';
-buttons.style.justifyContent = 'center';
-buttons.style.margin = '20px';
+const table = document.createElement('table');
+section2.appendChild(table);
