@@ -45,8 +45,6 @@ void mostrar_interface_pc_instrucoes_registradores(int s0, int s1, int s2, int p
     linha();
 }
 
-
-
 void pegar_instrucao(char instrucao[], int pc) {
     printf("PC: %d - Instrucao: ", pc);
     fflush(stdin);
@@ -74,7 +72,6 @@ int verificar_parte_Ssx(char token[], int i) {
     }
     return 1;
 }
-
 
 
 // Verificar instrucao
@@ -227,7 +224,6 @@ int verifica_label(char token[]) {
     }
     return 1;
 }
-
 
 
 // Executar instrucao
@@ -648,7 +644,7 @@ int operacao_jr(char label[]) {
 }
 
 
-
+// Emulador
 int main() {
     int s0 = 0, s1 = 1, s2 = 2, pc = 0;
     char log_instrucoes[21][30];
