@@ -93,7 +93,7 @@ int verificar_cpf(char string[]) {
 
         if (strcmp(cpf, string) == 0) {
             fclose(arquivo);
-            printf("CPF já cadastrado.\n");
+            printf("CPF jï¿½ cadastrado.\n");
             return 2;
         }
     }
@@ -113,7 +113,7 @@ int verificar_se_rua_avenida(char string[]) {
 
 
 
-// Clientes
+// Clientes - Henrique Oliveira
 
 void adicionar_cliente();
 void listar_clientes();
@@ -153,7 +153,7 @@ void gerenciar_clientes() {
 				excluir_cliente();
 				break;
 			default:
-				printf("Opção inválida.\n");
+				printf("Opï¿½ï¿½o invï¿½lida.\n");
 		}
 		sleep(2);
 		linha();
@@ -179,7 +179,7 @@ void adicionar_cliente() {
 
 	free(dado_cliente);
 } int coletar_dados_cliente(dados_clientes *dado_cliente) {
-	printf("Cadastro disponível apenas para clientes maiores de 18 anos.\n");
+	printf("Cadastro disponï¿½vel apenas para clientes maiores de 18 anos.\n");
 	// Coletar nome e sobrenome
 	while (1) {
 		printf("Digite o nome e sobrenome: ");
@@ -189,7 +189,7 @@ void adicionar_cliente() {
 		if (strstr(dado_cliente->nome, " ") != NULL) {
 			break;
 		}		
-		printf("Nome e sobrenome inválido.\n");
+		printf("Nome e sobrenome invï¿½lido.\n");
 		sleep(1.5);
 	}
 	
@@ -206,13 +206,13 @@ void adicionar_cliente() {
 		} else if (flag == 2) {
 			return 0;
 		}
-		printf("CPF inválido.\n");
+		printf("CPF invï¿½lido.\n");
 		sleep(1.5);
 	}
 
 	// Data de nascimento
 	int dia, mes, ano;
-	printf("Data de nascimento [Somente número]\n");
+	printf("Data de nascimento [Somente nï¿½mero]\n");
 	while (1) {
 		fflush(stdin);
 		printf("Dia: ");
@@ -220,17 +220,17 @@ void adicionar_cliente() {
 		if (dia > 0 && dia < 32) {
 			break;
 		}
-		printf("Dia inválido.\n");
+		printf("Dia invï¿½lido.\n");
 		sleep(1.5);
 	} 
 	while (1) {
 		fflush(stdin);
-		printf("Mês: ");
+		printf("Mï¿½s: ");
 		scanf("%d", &mes);
 		if (mes > 0 && mes < 13) {
 			break;
 		}
-		printf("Mês inválido.\n");
+		printf("Mï¿½s invï¿½lido.\n");
 		sleep(1.5);
 	} 
 	while (1) {
@@ -240,7 +240,7 @@ void adicionar_cliente() {
 		if (ano > 1899 && ano < 2025) {
 			break;
 		}
-		printf("Ano inválido.\n");
+		printf("Ano invï¿½lido.\n");
 		sleep(1.5);
 	}
 	if (ano_atual() - ano < 18) {
@@ -259,20 +259,20 @@ void adicionar_cliente() {
 		if (strstr(dado_cliente->email, "@") != NULL && strstr(dado_cliente->email, ".") != NULL) {
 			break;
 		}		
-		printf("Email inválido.\n");
+		printf("Email invï¿½lido.\n");
 		sleep(1.5);
 	}
 
-	// Coletar endereço
+	// Coletar endereï¿½o
 	while (1) {
-		printf("Digite o endereço: ");
+		printf("Digite o endereï¿½o: ");
 		fflush(stdin);
 		gets(dado_cliente->endereco);
 		
 		if (verificar_se_rua_avenida(dado_cliente->endereco)) {
 			break;
 		}		
-		printf("Endereço inválido.\n");
+		printf("Endereï¿½o invï¿½lido.\n");
 		sleep(1.5);
 	}
 
@@ -338,13 +338,13 @@ void listar_clientes() {
 			listar_por_cpf(clientes);
 			break;
 		default:
-			printf("Opção inválida.\n");
+			printf("Opï¿½ï¿½o invï¿½lida.\n");
 			return;
 	}
 
     printf("Clientes cadastrados:\n");
     for (int j = 0; j < i; j++) {
-        printf("Nome: %s, CPF: %s, Data de Nascimento: %s, Email: %s, Endereço: %s, Status: %s\n",
+        printf("Nome: %s, CPF: %s, Data de Nascimento: %s, Email: %s, Endereï¿½o: %s, Status: %s\n",
 		clientes[j].nome, clientes[j].cpf, clientes[j].data_nascimento, clientes[j].email, clientes[j].endereco, clientes[j].status);
     }
 	free(clientes);
@@ -400,10 +400,10 @@ void consultar_cliente() {
     }
 
 	if (encontrado) {
-		printf("Nome: %s, CPF: %s, Data de Nascimento: %s, Email: %s, Endereço: %s, Status: %s\n", 
+		printf("Nome: %s, CPF: %s, Data de Nascimento: %s, Email: %s, Endereï¿½o: %s, Status: %s\n", 
 		cliente.nome, cliente.cpf, cliente.data_nascimento, cliente.email, cliente.endereco, cliente.status);
 	} else {
-		printf("Cliente com CPF %s não encontrado.\n", cpf_procurado);
+		printf("Cliente com CPF %s nï¿½o encontrado.\n", cpf_procurado);
 	}
 }
 
@@ -425,7 +425,7 @@ void desativar_cliente() {
 
     FILE *temp = fopen("temp.txt", "w");
     if (temp == NULL) {
-        printf("Falha ao abrir o arquivo temporário.");
+        printf("Falha ao abrir o arquivo temporï¿½rio.");
         fclose(arquivo);
         return;
     }
@@ -455,7 +455,7 @@ void desativar_cliente() {
         printf("Status do cliente com CPF %s alterado para Inativo.\n", cpf_procurado);
     } else {
         remove("temp.txt");
-        printf("Cliente com CPF %s não encontrado.\n", cpf_procurado);
+        printf("Cliente com CPF %s nï¿½o encontrado.\n", cpf_procurado);
     }
 }
 
@@ -477,7 +477,7 @@ void excluir_cliente() {
 
     FILE *temp = fopen("temp.txt", "w");
     if (temp == NULL) {
-        printf("Falha ao abrir o arquivo temporário.");
+        printf("Falha ao abrir o arquivo temporï¿½rio.");
         fclose(arquivo);
         return;
     }
@@ -503,16 +503,16 @@ void excluir_cliente() {
     if (encontrado) {
         remove("clientes.txt");
         rename("temp.txt", "clientes.txt");
-        printf("Cliente com CPF %s excluído com sucesso.\n", cpf_procurado);
+        printf("Cliente com CPF %s excluï¿½do com sucesso.\n", cpf_procurado);
     } else {
         remove("temp.txt");
-        printf("Cliente com CPF %s não encontrado.\n", cpf_procurado);
+        printf("Cliente com CPF %s nï¿½o encontrado.\n", cpf_procurado);
     }
 }
 
 
 
-// Pedidos
+// Pedidos - Gabriel Cardoso
 
 void adicionar_novo_pedido();
 void listar_pedidos();
@@ -540,7 +540,7 @@ void gerenciar_pedidos(){
 			case 0:
 				break;
 			default:
-				printf("Opção Inválida!!.");
+				printf("Opï¿½ï¿½o Invï¿½lida!!.");
 		}
 			sleep(2);
 			linha();
@@ -578,7 +578,7 @@ void adicionar_novo_pedido(){
 	}
 	
 	if (encontrado == 0) {
-		printf("CPF não cadastrado.\n");
+		printf("CPF nï¿½o cadastrado.\n");
 		return;
 	}
 
@@ -604,14 +604,14 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
     float preco_instrumento = 0.0;
 
     
-    printf(" - Instrumentos Disponíveis -\n");
+    printf(" - Instrumentos Disponï¿½veis -\n");
     printf("[1] -- Guitarra Tagima.   valor:r$1300.00\n");
-    printf("[2] -- Violão Strinberg.  valor:r$1500.00\n");
+    printf("[2] -- Violï¿½o Strinberg.  valor:r$1500.00\n");
     printf("[3] -- Bateria Odery.     valor:r$4300.00\n");
     printf("[4] -- Teclado Yamaha.    valor:r$2300.00\n");
  
 
-    printf("Digite a Opção: ");
+    printf("Digite a Opï¿½ï¿½o: ");
     scanf("%d", &opcao);
     fflush(stdin); 
     
@@ -636,7 +636,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        	if (strstr(dado_pedido->data_pedido, "/") != NULL) {
 					break;
 				}		
-				printf("Formato inválido.\n");
+				printf("Formato invï¿½lido.\n");
 				sleep(2);
 			}
 			
@@ -644,13 +644,13 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        
 		while (1) {
 	        printf("[1] -- Pix\n");
-	        printf("[2] -- Cartão Débito ou Crédito\n");
+	        printf("[2] -- Cartï¿½o Dï¿½bito ou Crï¿½dito\n");
 	        printf("[3] -- Boleto\n");
-	        printf("Método de Pagamento: ");
+	        printf("Mï¿½todo de Pagamento: ");
 	        
 	   
 	        if (scanf("%d", &opcao) != 1) {
-	            printf("Erro! Por favor, insira um número válido.\n");
+	            printf("Erro! Por favor, insira um nï¿½mero vï¿½lido.\n");
 	            while (getchar() != '\n'); 
 	            continue;
 	        }
@@ -661,7 +661,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 2:
-	                strcpy(dado_pedido->metodo_pagamento, "Cartão");
+	                strcpy(dado_pedido->metodo_pagamento, "Cartï¿½o");
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 3:
@@ -669,7 +669,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            default:
-	                printf("Erro! Método de pagamento inválido.\n");
+	                printf("Erro! Mï¿½todo de pagamento invï¿½lido.\n");
 	                continue; 
 	        }
 	
@@ -683,7 +683,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
     	preco_instrumento=1500.0;
 
     	 
-    	strcpy(dado_pedido->instrumento, "Violão");
+    	strcpy(dado_pedido->instrumento, "Violï¿½o");
     	printf(" -- %s -- \n", dado_pedido->instrumento);
         printf("Digite a quantidade: ");
         scanf("%d", &dado_pedido->quantidade);
@@ -703,7 +703,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        	if (strstr(dado_pedido->data_pedido, "/") != NULL) {
 					break;
 				}		
-				printf("Formato inválido.\n");
+				printf("Formato invï¿½lido.\n");
 				sleep(2);
 			}
 			
@@ -711,13 +711,13 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        
 		while (1) {
 	        printf("[1] -- Pix\n");
-	        printf("[2] -- Cartão Débito ou Crédito\n");
+	        printf("[2] -- Cartï¿½o Dï¿½bito ou Crï¿½dito\n");
 	        printf("[3] -- Boleto\n");
-	        printf("Método de Pagamento: ");
+	        printf("Mï¿½todo de Pagamento: ");
 	        
 	   
 	        if (scanf("%d", &opcao) != 1) {
-	            printf("Erro! Por favor, insira um número válido.\n");
+	            printf("Erro! Por favor, insira um nï¿½mero vï¿½lido.\n");
 	            while (getchar() != '\n'); 
 	            continue;
 	        }
@@ -728,7 +728,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 2:
-	                strcpy(dado_pedido->metodo_pagamento, "Cartão");
+	                strcpy(dado_pedido->metodo_pagamento, "Cartï¿½o");
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 3:
@@ -736,7 +736,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            default:
-	                printf("Erro! Método de pagamento inválido.\n");
+	                printf("Erro! Mï¿½todo de pagamento invï¿½lido.\n");
 	                continue; 
 	        }
 	
@@ -770,7 +770,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        	if (strstr(dado_pedido->data_pedido, "/") != NULL) {
 					break;
 				}		
-				printf("Formato inválido.\n");
+				printf("Formato invï¿½lido.\n");
 				sleep(2);
 		}
 			
@@ -778,13 +778,13 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        
 		while (1) {
 	        printf("[1] -- Pix\n");
-	        printf("[2] -- Cartão Débito ou Crédito\n");
+	        printf("[2] -- Cartï¿½o Dï¿½bito ou Crï¿½dito\n");
 	        printf("[3] -- Boleto\n");
-	        printf("Método de Pagamento: ");
+	        printf("Mï¿½todo de Pagamento: ");
 	        
 	   
 	        if (scanf("%d", &opcao) != 1) {
-	            printf("Erro! Por favor, insira um número válido.\n");
+	            printf("Erro! Por favor, insira um nï¿½mero vï¿½lido.\n");
 	            while (getchar() != '\n'); 
 	            continue;
 	        }
@@ -795,7 +795,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 2:
-	                strcpy(dado_pedido->metodo_pagamento, "Cartão");
+	                strcpy(dado_pedido->metodo_pagamento, "Cartï¿½o");
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 3:
@@ -803,7 +803,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            default:
-	                printf("Erro! Método de pagamento inválido.\n");
+	                printf("Erro! Mï¿½todo de pagamento invï¿½lido.\n");
 	                continue; 
 	        }
 	
@@ -837,7 +837,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        	if (strstr(dado_pedido->data_pedido, "/") != NULL) {
 					break;
 				}		
-				printf("Formato inválido.\n");
+				printf("Formato invï¿½lido.\n");
 				sleep(2);
 		}
 			
@@ -845,13 +845,13 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	        
 		while (1) {  
 	        printf("[1] -- Pix\n");
-	        printf("[2] -- Cartão Débito ou Crédito\n");
+	        printf("[2] -- Cartï¿½o Dï¿½bito ou Crï¿½dito\n");
 	        printf("[3] -- Boleto\n");
-	        printf("Método de Pagamento: ");
+	        printf("Mï¿½todo de Pagamento: ");
 	        
 	   
 	        if (scanf("%d", &opcao) != 1) {
-	            printf("Erro! Por favor, insira um número válido.\n");
+	            printf("Erro! Por favor, insira um nï¿½mero vï¿½lido.\n");
 	            while (getchar() != '\n'); 
 	            continue;
 	        }
@@ -862,7 +862,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 2:
-	                strcpy(dado_pedido->metodo_pagamento, "Cartão");
+	                strcpy(dado_pedido->metodo_pagamento, "Cartï¿½o");
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            case 3:
@@ -870,7 +870,7 @@ void coletar_dados_pedido(dados_pedidos *dado_pedido) {
 	                strcpy(dado_pedido->status_pedido, "Ativo");
 	                break;
 	            default:
-	                printf("Erro! Método de pagamento inválido.\n");
+	                printf("Erro! Mï¿½todo de pagamento invï¿½lido.\n");
 	                continue; 
 	        }
 	
@@ -946,7 +946,7 @@ int main() {
 	
 	int opcao = -1;
 	while (opcao != 0) {
-		printf("--- Laboratório dos Instrumentos ---\n");
+		printf("--- Laboratï¿½rio dos Instrumentos ---\n");
 		printf("[1] Gerenciar Clientes\n");
 		printf("[2] Gerenciar Pedidos\n");
 		printf("[0] Sair\n");
@@ -962,7 +962,7 @@ int main() {
 			case 0:
 				break;
 			default:
-				printf("Opção inválida.\n");
+				printf("Opï¿½ï¿½o invï¿½lida.\n");
 		}
 	}
 }
