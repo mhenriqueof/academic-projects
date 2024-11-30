@@ -3,7 +3,6 @@
 # include <string.h>
 # include <unistd.h>
 
-
 // Funcoes
 void linha() {
     printf("--------------------------------------------------\n");
