@@ -1,9 +1,0 @@
-label, input, textarea, select{
-    margin: 5px;
-}
-
-legend{
-    padding: 5px;
-    color: blue;
-    font-weight: bold;
-}
