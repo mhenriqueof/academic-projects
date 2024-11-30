@@ -28,15 +28,15 @@ void menu_inicial() {
     linha();
 } 
 
-void mostrar_registradores_pc_log(int s0, int s1, int s2, int pc, char strings[][30]) {
+void mostrar_interface_pc_instrucoes_registradores(int s0, int s1, int s2, int pc, char instrucoes[][30]) {
     printf(".data\n");
     printf("var: .word 5\n");
     printf("\n");
     printf(".text\n");
     printf("main:\n");
-    int tamanho_strings = pc / 4;
-    for (int i = 0; i < tamanho_strings; i++) {
-        printf("    %02d - %s\n", 4*i, strings[i+1]);
+    int tamanho_instrucoes = pc / 4;
+    for (int i = 0; i < tamanho_instrucoes; i++) {
+        printf("    %02d - %s\n", 4*i, instrucoes[i+1]);
     }
     printf("\n");
     printf("s0: %d\n", s0);
@@ -166,11 +166,7 @@ int verificar_parte_restante(char instrucao[], int quantidade_partes) {
             cont++;
         }
     }
-
-    if (quantidade_partes == 3) {
-        return cont+1;
-    }
-
+    if (quantidade_partes == 3) {return cont+1;}
     return cont;
 } 
 
@@ -329,7 +325,6 @@ int executar_instrucao(char instrucao[], int quantidade_partes, int *s0, int *s1
             }
         }
     }
-
     return 0;
 } 
 
@@ -624,7 +619,6 @@ int operacao_li(int valor_registrador1, char label[], int *s0, int *s1, int *s2)
             return 1;
         }
     }
-    
 
     if (strlen(label) > 3) {return 0;}
 
@@ -662,7 +656,7 @@ int main() {
     menu_inicial();
 
     while (1) {
-        mostrar_registradores_pc_log(s0, s1, s2, pc, log_instrucoes);
+        mostrar_interface_pc_instrucoes_registradores(s0, s1, s2, pc, log_instrucoes);
 
         if (pc == 80) {break;}
         
