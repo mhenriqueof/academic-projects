@@ -21,7 +21,7 @@ void menu_inicial() {
     printf("--- Utilizar somente 3 registradores do tipo Saved [$s0, $s1, $s2]\n");
     printf("--- O simulador e limitado a ter apenas 20 instrucoes\n");
     sleep(1);
-    for (int i = 5; i > 0; i--) {
+    for (int i = 3; i > 0; i--) {
         printf("%d\n", i);
         sleep(1);
     }
