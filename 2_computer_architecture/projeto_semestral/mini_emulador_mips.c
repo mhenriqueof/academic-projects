@@ -10,8 +10,8 @@ void linha() {
 void menu_inicial() {
     printf("- Mini Emulador MIPS\n");
     printf("-- Operacoes disponiveis\n");
-    printf("--- Aritmeticas: add, addi, sub, mul, div\n");
-    printf("--- Acesso a memoria: la, li\n");
+    printf("--- Aritmeticas: add, sub, mul, div, addi\n");
+    printf("--- Imediatas: la, li\n");
     printf("--- Salto: j, jr, jal\n");
     printf("-- Regras: \n");
     printf("--- Utilizar apenas letras minusculas\n");
