@@ -45,7 +45,7 @@ void mostrar_interface_pc_instrucoes_registradores(int s0, int s1, int s2, int p
 }
 
 void pegar_instrucao(char instrucao[], int pc) {
-    printf("PC: %d - Instrucao: ", pc);
+    printf("Instrucao %d: ", (pc+4) / 4);
     fflush(stdin);
     gets(instrucao);
 }
