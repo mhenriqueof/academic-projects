@@ -18,7 +18,7 @@ void menu_inicial() {
     printf("--- Utilizar apenas numeros inteiros e com ate 3 digitos\n");
     printf("--- Utilizar somente 3 registradores do tipo saved [s0, s1, s2]\n");
     printf("--- Nao utilizar um registrador mais de uma vez em uma instrucao\n");
-    printf("--- O simulador e limitado a ter apenas 20 instrucoes\n");
+    printf("-- O simulador e limitado a ter apenas 20 instrucoes\n");
     sleep(1);
     for (int i = 3; i > 0; i--) {
         printf("%d\n", i);
