@@ -8,7 +8,7 @@ This repository contains the exercises and projects I completed for each course 
   - Algorithms and Programming Logic - C
 - **2024 - Semester 2**
   - Basic Web Development - HTML, CSS, JavaScript - Travel Agency website
-  - Computer Architecture - Assembly - Mini MIPS Emulator
+  - Computer Architecture - Assembly, C - Mini MIPS Emulator
   - Computer Programming - C - Instrument Store
   - Database - MySQL - Supermarket database
 
