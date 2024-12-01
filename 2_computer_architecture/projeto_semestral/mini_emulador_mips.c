@@ -50,27 +50,17 @@ void pegar_instrucao(char instrucao[], int pc) {
     gets(instrucao);
 }
 
-int verificar_parte_Ssx(char token[], int i) {
-    int tamanho = strlen(token);
-    if (tamanho != 3 && tamanho != 4) {
-        return 0;
-    } if (i == 1 && tamanho != 4) {
-        return 0;
-    } if (i == 2 && tamanho != 4) {
-        return 0;
-    } if (i == 3 && tamanho == 4) {
-        return 0;
-    } if (token[0] != '$' || token[1] != 's') {
-        return 0;
-    } if (token[2] < 48 || token[2] > 50) {
-        return 0;
-    } if (tamanho == 4) {
-        if (token[3] != ',') {
-            return 0;
-        }
-    }
-    return 1;
+void atualizar_pc_log(int *pc, char log_instrucoes[][30], char instrucao[]) {
+    *pc += 4;
+    int posicao_log = *pc / 4;
+    strcpy(log_instrucoes[posicao_log], instrucao);
 }
+
+void instrucao_invalida() {
+    printf("Instrucao invalida.\n");
+    sleep(1.5);
+    linha();
+};
 
 
 // Verificar instrucao
@@ -138,6 +128,7 @@ int verificar_parte_inicial(char instrucao[]) {
     return strcmp(operacao, "add") == 0 || strcmp(operacao, "addi") == 0 || strcmp(operacao, "sub") == 0 || strcmp(operacao, "mul") == 0 || strcmp(operacao, "div") == 0;
 }
 
+int verificar_parte_Ssx();
 int verificar_parte_restante(char instrucao[], int quantidade_partes) {
     if (quantidade_partes == 2) {
         return 2;
@@ -164,7 +155,27 @@ int verificar_parte_restante(char instrucao[], int quantidade_partes) {
     }
     if (quantidade_partes == 3) {return cont+1;}
     return cont;
-} 
+} int verificar_parte_Ssx(char token[], int i) {
+    int tamanho = strlen(token);
+    if (tamanho != 3 && tamanho != 4) {
+        return 0;
+    } if (i == 1 && tamanho != 4) {
+        return 0;
+    } if (i == 2 && tamanho != 4) {
+        return 0;
+    } if (i == 3 && tamanho == 4) {
+        return 0;
+    } if (token[0] != '$' || token[1] != 's') {
+        return 0;
+    } if (token[2] < 48 || token[2] > 50) {
+        return 0;
+    } if (tamanho == 4) {
+        if (token[3] != ',') {
+            return 0;
+        }
+    }
+    return 1;
+}
 
 int final_ser_tipo_label();
 int final_ser_tipo_registrador();
@@ -653,26 +664,20 @@ int main() {
         mostrar_interface_pc_instrucoes_registradores(s0, s1, s2, pc, log_instrucoes);
 
         if (pc == 80) {break;}
-        
-        int quantidade_partes;
-        
+
         char instrucao[30];
         pegar_instrucao(instrucao, pc);
+        
+        int quantidade_partes;
 
         if (verificar_instrucao(instrucao, &quantidade_partes)) {
             if (executar_instrucao(instrucao, quantidade_partes, &s0, &s1, &s2, &pc)) {
-                pc += 4;
-                int posicao_log = pc / 4;
-                strcpy(log_instrucoes[posicao_log], instrucao);
+                atualizar_pc_log(&pc, log_instrucoes, instrucao);
             } else {
-                printf("Instrucao invalida.\n");
-                sleep(1.5);
-                linha();
+                instrucao_invalida();
             }
         } else {
-            printf("Instrucao invalida.\n");
-            sleep(1.5);
-            linha();
+            instrucao_invalida();
         }   
     }
     printf("Maximo de 20 instrucoes alcancado.\n");
