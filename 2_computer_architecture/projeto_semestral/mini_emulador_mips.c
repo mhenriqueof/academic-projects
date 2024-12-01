@@ -632,31 +632,26 @@ int operacao_jr(char label[]) {
 
 // Emulador
 int main() {
-    int s0 = 0, s1 = 1, s2 = 2, pc = 0;
+    int s0 = 0, s1 = 1, s2 = 2, pc = 0, quantidade_partes = 0;
     char log_instrucoes[21][30];
     
     menu_inicial();
 
-    while (1) {
+    while (pc < 80) {
         mostrar_interface_pc_instrucoes_registradores(s0, s1, s2, pc, log_instrucoes);
-
-        if (pc == 80) {break;}
 
         char instrucao[30];
         pegar_instrucao(instrucao, pc);
-        
-        int quantidade_partes;
 
         if (verificar_instrucao(instrucao, &quantidade_partes)) {
             if (executar_instrucao(instrucao, quantidade_partes, &s0, &s1, &s2, &pc)) {
                 atualizar_pc_log(&pc, log_instrucoes, instrucao);
-            } else {
-                instrucao_invalida();
+                continue;
             }
-        } else {
-            instrucao_invalida();
-        }   
+        }
+        instrucao_invalida();
     }
+    mostrar_interface_pc_instrucoes_registradores(s0, s1, s2, pc, log_instrucoes);
     printf("Maximo de 20 instrucoes alcancado.\n");
     return 0;
 }
