@@ -490,9 +490,7 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
     }
     return 0;
 } int char_para_int_negativo(char valor[]) {
-    int centena = 0, dezena = 0, unidade = 0;
-
-    int tamanho = strlen(valor);
+    int centena = 0, dezena = 0, unidade = 0, tamanho = strlen(valor);
 
     if (tamanho == 4) {
         for (int i = 0; i < 10; i++) {
@@ -530,9 +528,7 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
     }
     return 100 * centena + 10 * dezena + unidade;
 } int char_para_int(char valor[]) {
-    int centena = 0, dezena = 0, unidade = 0;
-
-    int tamanho = strlen(valor);
+    int centena = 0, dezena = 0, unidade = 0, tamanho = strlen(valor);
 
     if (tamanho == 3) {
         for (int i = 0; i < 10; i++) {
