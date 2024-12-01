@@ -48,6 +48,7 @@ void pegar_instrucao(char instrucao[], int pc) {
     printf("Instrucao %d: ", (pc+4) / 4);
     fflush(stdin);
     gets(instrucao);
+    linha();
 }
 
 void atualizar_pc_log(int *pc, char log_instrucoes[][30], char instrucao[]) {
