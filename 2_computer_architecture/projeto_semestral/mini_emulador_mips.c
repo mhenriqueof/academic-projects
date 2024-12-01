@@ -261,7 +261,7 @@ int executar_instrucao(char instrucao[], int quantidade_partes, int *s0, int *s1
         registrador2 = strtok(NULL, " ");
         registrador3 = strtok(NULL, " ");
         
-        if (registrador1[2] == registrador2[2] || registrador1[2] == registrador3[2]) {return 0;}
+        if (registrador1[2] == registrador2[2] || registrador1[2] == registrador3[2] || registrador2[2] == registrador3[2]) {return 0;}
 
         char valor_registrador1 = registrador1[2];
         char valor_registrador2 = registrador2[2];
