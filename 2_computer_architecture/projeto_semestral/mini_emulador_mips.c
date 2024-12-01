@@ -468,7 +468,6 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
         }
     }
     
-
     if (strlen(valor) > 3) {return 0;}
 
     int numero = char_para_int(valor);
