@@ -433,10 +433,7 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
         numero *= -1;
 
         if (valor_registrador1 == '0') {
-            if (valor_registrador2 == '0') {
-                *s0 = *s0 + numero;
-                return 1;
-            } else if (valor_registrador2 == '1') {
+            if (valor_registrador2 == '1') {
                 *s0 = *s1 + numero;
                 return 1;
             } else {
@@ -447,9 +444,6 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
             if (valor_registrador2 == '0') {
                 *s1 = *s0 + numero;
                 return 1;
-            } else if (valor_registrador2 == '1') {
-                *s1 = *s1 + numero;
-                return 1;
             } else {
                 *s1 = *s2 + numero;
                 return 1;
@@ -458,11 +452,8 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
             if (valor_registrador2 == '0') {
                 *s2 = *s0 + numero;
                 return 1;
-            } else if (valor_registrador2 == '1') {
-                *s2 = *s1 + numero;
-                return 1;
             } else {
-                *s2 = *s2 + numero;
+                *s2 = *s1 + numero;
                 return 1;
             }
         }
@@ -473,10 +464,7 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
     int numero = char_para_int(valor);
 
     if (valor_registrador1 == '0') {
-        if (valor_registrador2 == '0') {
-            *s0 = *s0 + numero;
-            return 1;
-        } else if (valor_registrador2 == '1') {
+        if (valor_registrador2 == '1') {
             *s0 = *s1 + numero;
             return 1;
         } else {
@@ -487,9 +475,6 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
         if (valor_registrador2 == '0') {
             *s1 = *s0 + numero;
             return 1;
-        } else if (valor_registrador2 == '1') {
-            *s1 = *s1 + numero;
-            return 1;
         } else {
             *s1 = *s2 + numero;
             return 1;
@@ -498,11 +483,8 @@ int operacao_addi(int valor_registrador1, int valor_registrador2, char valor[], 
         if (valor_registrador2 == '0') {
             *s2 = *s0 + numero;
             return 1;
-        } else if (valor_registrador2 == '1') {
-            *s2 = *s1 + numero;
-            return 1;
         } else {
-            *s2 = *s2 + numero;
+            *s2 = *s1 + numero;
             return 1;
         }
     }
