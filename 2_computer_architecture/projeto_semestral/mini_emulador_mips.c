@@ -18,6 +18,7 @@ void menu_inicial() {
     printf("--- Utilizar apenas letras minusculas\n");
     printf("--- Utilizar somente numeros inteiros e com ate 3 casas\n");
     printf("--- Utilizar somente 3 registradores do tipo Saved [$s0, $s1, $s2]\n");
+    printf("--- Nao utilizar um registrador mais de uma vez em uma instrucao\n");
     printf("--- O simulador e limitado a ter apenas 20 instrucoes\n");
     sleep(1);
     for (int i = 3; i > 0; i--) {
@@ -249,6 +250,8 @@ int executar_instrucao(char instrucao[], int quantidade_partes, int *s0, int *s1
         registrador1 = strtok(NULL, " ");
         registrador2 = strtok(NULL, " ");
         registrador3 = strtok(NULL, " ");
+        
+        if (registrador1[2] == registrador2[2] || registrador1[2] == registrador3[2]) {return 0;}
 
         char valor_registrador1 = registrador1[2];
         char valor_registrador2 = registrador2[2];
@@ -341,15 +344,12 @@ int operacao_add(int valor_registrador1, int *s0, int *s1, int *s2) {
 int operacao_mul(int valor_registrador1, int *s0, int *s1, int *s2) {
     if (valor_registrador1 == '0') {
         *s0 = *s1 * *s2;
-        printf("0\n");
         return 1;
     } if (valor_registrador1 == '1') {
         *s1 = *s0 * *s2;
-        printf("1\n");
         return 1;
     } if (valor_registrador1 == '2'){
         *s2 = *s0 * *s1;
-        printf("2\n");
         return 1;
     }
     return 0;
