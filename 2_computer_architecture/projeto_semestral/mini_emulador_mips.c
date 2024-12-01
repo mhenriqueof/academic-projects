@@ -673,6 +673,7 @@ int main() {
         } else {
             printf("Instrucao invalida.\n");
             sleep(1.5);
+            linha();
         }   
     }
     printf("Maximo de 20 instrucoes alcancado.\n");
