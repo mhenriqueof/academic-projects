@@ -8,7 +8,7 @@ This repository contains the projects and exercises I completed for each course 
   - Algorithms and Programming Logic - C
 - **2024 - Semester 2**
   - Basic Web Development - HTML, CSS, JavaScript - Travel Agency website
-  - Computer Programming - C - Instrument Store
+  - Computer Programming - C - Instrument Store (group project)
   - Database - MySQL - Supermarket database
 
 Thanks!
