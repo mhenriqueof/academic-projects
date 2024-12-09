@@ -1,7 +1,7 @@
 # Academic Portfolio - Universidade Positivo
 
 ## About
-This repository contains the projects and exercises I completed for each course during my undergraduate studies in Computer Science at Universidade Positivo (2024 - 2027).
+This repository contains the projects I completed for each course during my undergraduate studies in Computer Science at Universidade Positivo (2024 - 2027).
 
 ## Coursework
 - **2024 - Semester 2**
