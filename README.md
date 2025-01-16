@@ -4,6 +4,7 @@ This repository contains some projects I completed for some subjects during my u
 
 ## **2024 - Semester 2**
   - Basic Web Development - HTML, CSS, JavaScript - Travel Agency website
+  - Computer Architecture - C - Mini Mips Emulator
   - Computer Programming - C - Instrument Store (group project)
   - Database - MySQL - Supermarket database
 
